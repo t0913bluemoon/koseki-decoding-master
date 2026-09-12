@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>やさしくわかる！戸籍の用語｜戸籍解読マスター</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@700&display=swap"
+          rel="stylesheet">
+    <!-- Tailwind カスタム設定 -->
+    <script src="./tailwind.config.js"></script>
+    <!-- 分割した CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed selection:bg-brand-100">
+<!-- ==========================================================
+     HEADER + ナビゲーション
+========================================================== -->
+<header class="sticky top-0 z-50 bg-navy-900 text-white shadow-xl">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex flex-col items-center sm:items-start">
+            <span class="font-black text-xl sm:text-2xl tracking-wide leading-none">
+                戸籍解読マスター
+            </span>
+            <span class="text-[10px] sm:text-xs text-brand-400 font-bold tracking-widest mt-2 uppercase">
+                Complete Practical Guide
+            </span>
+        </div>
+        <nav class="flex flex-wrap justify-center gap-2">
+            <a href="index.html" class="nav-link">トップ</a>
+            <a href="terms.html" class="nav-link active">用語</a>
+            <a href="documents.html" class="nav-link">書類の選び方</a>
+            <a href="simulator.html" class="nav-link">解読シミュレーター</a>
+        </nav>
+    </div>
+</header>
+<!-- ==========================================================
+     用語のやさしい解説
+========================================================== -->
+<section class="py-20 px-6 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-4 tracking-tighter">
+            やさしくわかる！戸籍の用語
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base italic">
+            戸籍を読むときに知っておきたい言葉を、できるだけやさしく説明します。
+        </p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 筆頭者 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-brand-500 transition-all">
+            <div class="text-brand-600 font-black text-lg mb-2">
+                筆頭者（ひっとうしゃ）
+            </div>
+            <div class="text-slate-900 font-bold mb-3">
+                ＝ 戸籍の代表者
+            </div>
+            <p class="text-xs text-slate-500">
+                戸籍を確認するときの基準となる人です。
+            </p>
+        </div>
+        <!-- 隠居 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-amber-500 transition-all">
+            <div class="text-amber-600 font-black text-lg mb-2">
+                隠居（いんきょ）
+            </div>
+            <div class="text-slate-900 font-bold mb-3">
+                ＝ 生前の引退
+            </div>
+            <p class="text-xs text-slate-500">
+                昔の制度で、家の代表者が生きているうちに跡継ぎへ交代することです。
+            </p>
+        </div>
+        <!-- 後見人 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-rose-500 transition-all">
+            <div class="text-rose-600 font-black text-lg mb-2">
+                後見人（こうけんにん）
+            </div>
+            <div class="text-slate-900 font-bold mb-3">
+                ＝ 本人を保護する人
+            </div>
+            <p class="text-xs text-slate-500">
+                親権者がいない場合などに、本人に代わって財産管理などを行う人です。
+            </p>
+        </div>
+        <!-- 附票 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-500 transition-all">
+            <div class="text-blue-600 font-black text-lg mb-2">
+                戸籍の附票（ふひょう）
+            </div>
+            <div class="text-slate-900 font-bold mb-3">
+                ＝ 住所の履歴
+            </div>
+            <p class="text-xs text-slate-500">
+                その戸籍に記録されている住所の履歴を確認できます。
+            </p>
+        </div>
+    </div>
+</section>
+<!-- ==========================================================
+     次のページへ
+========================================================== -->
+<section class="py-16 px-6 bg-white border-t border-slate-200">
+    <div class="max-w-3xl mx-auto text-center">
+        <p class="text-slate-600 mb-6">
+            言葉の意味がわかったら、次は「どの書類を取ればいいか」を確認しましょう。
+        </p>
+        <a href="documents.html"
+           class="inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-600 text-slate-900 font-black px-8 py-4 rounded-2xl shadow-xl transition-all">
+            書類の選び方を見る
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+<footer class="bg-navy-900 text-slate-600 py-12 px-6 text-center border-t border-slate-800">
+    <p class="font-black text-white text-lg mb-2 tracking-tight">戸籍・附票解読マスター</p>
+    <p class="text-xs max-w-md mx-auto leading-relaxed">複雑な公的書類を、初心者にもわかりやすく読み解くためのものです。</p>
+    <nav class="flex flex-wrap justify-center gap-4 mt-6 text-xs">
+        <a href="index.html" class="hover:text-brand-400">トップ</a>
+        <a href="terms.html" class="hover:text-brand-400">用語</a>
+        <a href="documents.html" class="hover:text-brand-400">書類の選び方</a>
+        <a href="simulator.html" class="hover:text-brand-400">解読シミュレーター</a>
+    </nav>
+    <p class="text-[9px] font-mono tracking-widest pt-6 uppercase">© 2026 戸籍解読マスター</p>
+</footer>
+</body>
+</html>

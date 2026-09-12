@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戸籍解読マスター｜初心者にもやさしい戸籍の読み方</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@700&display=swap"
+          rel="stylesheet">
+    <!-- Tailwind カスタム設定 -->
+    <script src="./tailwind.config.js"></script>
+    <!-- 分割した CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed selection:bg-brand-100">
+<!-- ==========================================================
+     HEADER + ナビゲーション
+========================================================== -->
+<header class="sticky top-0 z-50 bg-navy-900 text-white shadow-xl">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex flex-col items-center sm:items-start">
+            <span class="font-black text-xl sm:text-2xl tracking-wide leading-none">
+                戸籍解読マスター
+            </span>
+            <span class="text-[10px] sm:text-xs text-brand-400 font-bold tracking-widest mt-2 uppercase">
+                Complete Practical Guide
+            </span>
+        </div>
+        <nav class="flex flex-wrap justify-center gap-2">
+            <a href="index.html" class="nav-link active">トップ</a>
+            <a href="terms.html" class="nav-link">用語</a>
+            <a href="documents.html" class="nav-link">書類の選び方</a>
+            <a href="simulator.html" class="nav-link">解読シミュレーター</a>
+        </nav>
+    </div>
+</header>
+<!-- ==========================================================
+     HERO
+========================================================== -->
+<section class="bg-navy-900 text-white pt-16 pb-24 px-6 border-b-4 border-brand-500 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-brand-300 font-bold text-xs px-4 py-2 rounded-full mb-10 shadow-inner">
+            <i class="fa-solid fa-scroll text-amber-400"></i>
+            家督相続・隠居から、転籍・附票まで
+        </span>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight mb-8 tracking-tighter">
+            戸籍の「わかりにくい言葉」を
+            <br class="hidden md:block">
+            <span class="text-brand-400 underline decoration-wavy decoration-brand-500/50">
+                初心者にもわかりやすく
+            </span>
+            <br class="hidden md:block">
+            解説します。
+        </h1>
+        <p class="text-base sm:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+            昔の戸籍に出てくる家督相続や隠居から、
+            <br>
+            転籍・分籍・養子・認知・後見人・附票まで。
+            <br>
+            相続調査で迷いやすいポイントを、やさしく確認できます。
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <div class="bg-slate-800/80 px-6 py-4 rounded-2xl border border-slate-700 flex items-center gap-3 text-sm font-bold shadow-xl">
+                <i class="fa-solid fa-users-gear text-amber-400 text-lg"></i>
+                家督相続・隠居
+            </div>
+            <div class="bg-slate-800/80 px-6 py-4 rounded-2xl border border-slate-700 flex items-center gap-3 text-sm font-bold shadow-xl">
+                <i class="fa-solid fa-link text-emerald-400 text-lg"></i>
+                養子・認知・分籍
+            </div>
+            <div class="bg-slate-800/80 px-6 py-4 rounded-2xl border border-slate-700 flex items-center gap-3 text-sm font-bold shadow-xl">
+                <i class="fa-solid fa-user-shield text-rose-400 text-lg"></i>
+                後見人
+            </div>
+            <div class="bg-slate-800/80 px-6 py-4 rounded-2xl border border-slate-700 flex items-center gap-3 text-sm font-bold shadow-xl">
+                <i class="fa-solid fa-map-location-dot text-blue-400 text-lg"></i>
+                転籍・附票
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==========================================================
+     次のページへ
+========================================================== -->
+<section class="py-16 px-6 bg-white">
+    <div class="max-w-3xl mx-auto text-center">
+        <p class="text-slate-600 mb-6">
+            まずは、戸籍を読むときによく出てくる言葉から確認してみましょう。
+        </p>
+        <a href="terms.html"
+           class="inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-600 text-slate-900 font-black px-8 py-4 rounded-2xl shadow-xl transition-all">
+            用語のやさしい解説を見る
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+<footer class="bg-navy-900 text-slate-600 py-12 px-6 text-center border-t border-slate-800">
+    <p class="font-black text-white text-lg mb-2 tracking-tight">戸籍・附票解読マスター</p>
+    <p class="text-xs max-w-md mx-auto leading-relaxed">複雑な公的書類を、初心者にもわかりやすく読み解くためのものです。</p>
+    <nav class="flex flex-wrap justify-center gap-4 mt-6 text-xs">
+        <a href="index.html" class="hover:text-brand-400">トップ</a>
+        <a href="terms.html" class="hover:text-brand-400">用語</a>
+        <a href="documents.html" class="hover:text-brand-400">書類の選び方</a>
+        <a href="simulator.html" class="hover:text-brand-400">解読シミュレーター</a>
+    </nav>
+    <p class="text-[9px] font-mono tracking-widest pt-6 uppercase">© 2026 戸籍解読マスター</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戸籍の「記載」を読んでみよう｜戸籍解読マスター</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@700&display=swap"
+          rel="stylesheet">
+    <!-- Tailwind カスタム設定 -->
+    <script src="./tailwind.config.js"></script>
+    <!-- 分割した CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-900 text-slate-800 font-sans leading-relaxed selection:bg-brand-100">
+<!-- ==========================================================
+     HEADER + ナビゲーション
+========================================================== -->
+<header class="sticky top-0 z-50 bg-navy-900 text-white shadow-xl">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex flex-col items-center sm:items-start">
+            <span class="font-black text-xl sm:text-2xl tracking-wide leading-none">
+                戸籍解読マスター
+            </span>
+            <span class="text-[10px] sm:text-xs text-brand-400 font-bold tracking-widest mt-2 uppercase">
+                Complete Practical Guide
+            </span>
+        </div>
+        <nav class="flex flex-wrap justify-center gap-2">
+            <a href="index.html" class="nav-link">トップ</a>
+            <a href="terms.html" class="nav-link">用語</a>
+            <a href="documents.html" class="nav-link">書類の選び方</a>
+            <a href="simulator.html" class="nav-link active">解読シミュレーター</a>
+        </nav>
+    </div>
+</header>
+<!-- ==========================================================
+     解読シミュレーター
+========================================================== -->
+<section id="viewer-section"
+         class="py-20 bg-slate-900 text-white px-6 border-y-4 border-brand-500">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-black mb-4 tracking-tighter">
+                戸籍の「記載」を読んでみよう
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base">
+                タブを切り替えて、点線の枠をタップすると詳しい説明が表示されます。
+            </p>
+        </div>
+        <div class="max-w-4xl mx-auto mb-8 bg-amber-50 text-amber-950 border border-amber-200 rounded-2xl p-5 text-sm leading-relaxed">
+            <strong>相続人調査の基本：</strong>
+            1枚の戸籍だけで判断せず、
+            婚姻・離婚・養子・認知・分籍・転籍・後見・改製などの記載を手がかりに、
+            前後の戸籍をつないで確認するイメージです。
+            <br><br>
+            ※このページに表示される戸籍は学習用の見本です。
+        </div>
+        <!-- Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10">
+            <button onclick="switchDoc('hara')" id="tab-hara" class="tab-btn active">原戸籍</button>
+            <button onclick="switchDoc('shusshi')" id="tab-shusshi" class="tab-btn">出生・死亡</button>
+            <button onclick="switchDoc('tenseki')" id="tab-tenseki" class="tab-btn">転籍</button>
+            <button onclick="switchDoc('tokushu')" id="tab-tokushu" class="tab-btn">養子・認知</button>
+            <button onclick="switchDoc('rien')" id="tab-rien" class="tab-btn">養子離縁</button>
+            <button onclick="switchDoc('junsei')" id="tab-junsei" class="tab-btn">準正</button>
+            <button onclick="switchDoc('nyuuseki')" id="tab-nyuuseki" class="tab-btn">入籍・復籍</button>
+            <button onclick="switchDoc('seimei')" id="tab-seimei" class="tab-btn">氏の変更</button>
+            <button onclick="switchDoc('bunseki')" id="tab-bunseki" class="tab-btn">分籍</button>
+            <button onclick="switchDoc('kekkon')" id="tab-kekkon" class="tab-btn">婚姻・離婚</button>
+            <button onclick="switchDoc('shinken')" id="tab-shinken" class="tab-btn">親権</button>
+            <button onclick="switchDoc('koken')" id="tab-koken" class="tab-btn">後見人</button>
+            <button onclick="switchDoc('shissou')" id="tab-shissou" class="tab-btn">失踪宣告</button>
+            <button onclick="switchDoc('haijo')" id="tab-haijo" class="tab-btn">相続人廃除</button>
+            <button onclick="switchDoc('kokuseki')" id="tab-kokuseki" class="tab-btn">国籍・帰化</button>
+            <button onclick="switchDoc('fuhyo')" id="tab-fuhyo" class="tab-btn">戸籍の附票</button>
+            <button onclick="switchDoc('joseki')" id="tab-joseki" class="tab-btn">除籍</button>
+            <button onclick="switchDoc('kaisei')" id="tab-kaisei" class="tab-btn">改製</button>
+        </div>
+        <!-- Simulator
+             ・スマホ（〜767px）：1カラムで縦積み
+             ・タブレット（768px〜1023px, md）：2カラム 1:1
+             ・PC（1024px〜, lg）：12カラムグリッドで 7:5
+        -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-10 items-start">
+            <!-- LEFT -->
+            <div class="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-8 lg:p-10 border-4 border-slate-800 shadow-2xl relative min-h-[420px] sm:min-h-[480px] lg:min-h-[600px] overflow-hidden">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
+                    <span id="doc-badge-label"
+                          class="bg-brand-50 text-brand-800 font-black text-xs px-3 py-1.5 rounded-md border border-brand-200">
+                        明治・昭和の旧戸籍
+                    </span>
+                </div>
+                <div id="document-canvas" class="h-full text-slate-900 transition-opacity duration-300 overflow-x-auto"></div>
+            </div>
+            <!-- RIGHT -->
+            <div class="lg:col-span-5 bg-navy-800 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl border border-slate-700 min-h-0 lg:min-h-[600px] flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-2 mb-6 lg:mb-8">
+                        <span id="exp-badge" class="bg-amber-400 text-navy-900 text-[10px] font-black px-3 py-1 rounded-full uppercase">Point</span>
+                        <span id="doc-type-label" class="text-slate-400 text-xs font-bold tracking-widest">改製原戸籍</span>
+                    </div>
+                    <h3 id="exp-title" class="text-xl sm:text-2xl lg:text-3xl font-black mb-4 lg:mb-6 text-white leading-tight">
+                        枠線を選択してください
+                    </h3>
+                    <div id="exp-body" class="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed space-y-6">
+                        左側のサンプルの点線枠をタップすると、
+                        戸籍に書かれている内容をやさしく解説します。
+                    </div>
+                </div>
+                <div class="mt-8 lg:mt-12 pt-6 lg:pt-8 border-t border-slate-700 flex justify-between items-center text-xs text-slate-500">
+                    <span class="font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-check-circle text-brand-500"></i>
+                        戸籍の読み方を確認
+                    </span>
+                    <i class="fa-solid fa-file-invoice text-brand-400 text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+<footer class="bg-navy-900 text-slate-600 py-12 px-6 text-center border-t border-slate-800">
+    <p class="font-black text-white text-lg mb-2 tracking-tight">戸籍・附票解読マスター</p>
+    <p class="text-xs max-w-md mx-auto leading-relaxed">複雑な公的書類を、初心者にもわかりやすく読み解くためのものです。</p>
+    <nav class="flex flex-wrap justify-center gap-4 mt-6 text-xs">
+        <a href="index.html" class="hover:text-brand-400">トップ</a>
+        <a href="terms.html" class="hover:text-brand-400">用語</a>
+        <a href="documents.html" class="hover:text-brand-400">書類の選び方</a>
+        <a href="simulator.html" class="hover:text-brand-400">解読シミュレーター</a>
+    </nav>
+    <p class="text-[9px] font-mono tracking-widest pt-6 uppercase">© 2026 戸籍解読マスター</p>
+</footer>
+<!-- データとロジックは script.js に分離 -->
+<script src="./data.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>

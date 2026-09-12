@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結局、どの書類を取ればいい？｜戸籍解読マスター</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@700&display=swap"
+          rel="stylesheet">
+    <!-- Tailwind カスタム設定 -->
+    <script src="./tailwind.config.js"></script>
+    <!-- 分割した CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed selection:bg-brand-100">
+<!-- ==========================================================
+     HEADER + ナビゲーション
+========================================================== -->
+<header class="sticky top-0 z-50 bg-navy-900 text-white shadow-xl">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex flex-col items-center sm:items-start">
+            <span class="font-black text-xl sm:text-2xl tracking-wide leading-none">
+                戸籍解読マスター
+            </span>
+            <span class="text-[10px] sm:text-xs text-brand-400 font-bold tracking-widest mt-2 uppercase">
+                Complete Practical Guide
+            </span>
+        </div>
+        <nav class="flex flex-wrap justify-center gap-2">
+            <a href="index.html" class="nav-link">トップ</a>
+            <a href="terms.html" class="nav-link">用語</a>
+            <a href="documents.html" class="nav-link active">書類の選び方</a>
+            <a href="simulator.html" class="nav-link">解読シミュレーター</a>
+        </nav>
+    </div>
+</header>
+<!-- ==========================================================
+     書類の選び方
+========================================================== -->
+<section id="documents"
+         class="py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+            <span class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 border border-brand-200 px-4 py-2 rounded-full text-xs font-black mb-5">
+                <i class="fa-solid fa-file-circle-question"></i>
+                初心者向け
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-5 tracking-tighter">
+                結局、どの書類を取ればいい？
+            </h2>
+            <p class="text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                戸籍には似たような名前の書類がいくつもあります。
+                <br>
+                まずは「何を確認したいのか」で考えるとわかりやすくなります。
+            </p>
+        </div>
+        <!-- まず結論 -->
+        <div class="max-w-4xl mx-auto mb-12">
+            <div class="bg-slate-900 text-white rounded-3xl p-7 sm:p-10 shadow-xl">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-10 h-10 bg-brand-500 text-slate-900 rounded-xl flex items-center justify-center font-black">
+                        ？
+                    </span>
+                    <h3 class="text-xl sm:text-2xl font-black">
+                        まずはここを確認
+                    </h3>
+                </div>
+                <div class="space-y-4 text-sm sm:text-base">
+                    <div class="flex gap-4 items-start">
+                        <span class="text-brand-400 font-black">01</span>
+                        <p><strong class="text-white">今の家族関係を確認したい</strong> → 戸籍謄本</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <span class="text-brand-400 font-black">02</span>
+                        <p><strong class="text-white">戸籍の一部の人だけ確認したい</strong> → 戸籍抄本</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <span class="text-brand-400 font-black">03</span>
+                        <p><strong class="text-white">過去の戸籍をさかのぼりたい</strong> → 改製原戸籍・除籍謄本など</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <span class="text-brand-400 font-black">04</span>
+                        <p><strong class="text-white">住所の移り変わりを確認したい</strong> → 戸籍の附票</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 書類カード -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="document-card bg-slate-50 rounded-3xl border border-slate-200 p-7">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-700 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-lg">戸籍謄本</h3>
+                        <p class="text-xs text-slate-500">戸籍全部事項証明書</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-4 mb-5">
+                    <p class="font-black text-slate-900 text-sm mb-2">こんなとき</p>
+                    <p class="text-sm text-slate-600">戸籍に入っている人全員の情報を確認したいとき。</p>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed">相続手続きなどで、戸籍全体の情報を確認するときによく使われます。</p>
+            </div>
+            <div class="document-card bg-slate-50 rounded-3xl border border-slate-200 p-7">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-file"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-lg">戸籍抄本</h3>
+                        <p class="text-xs text-slate-500">戸籍個人事項証明書</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-4 mb-5">
+                    <p class="font-black text-slate-900 text-sm mb-2">こんなとき</p>
+                    <p class="text-sm text-slate-600">戸籍にいる人のうち、特定の人だけを確認したいとき。</p>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed">戸籍全体ではなく、必要な人の情報だけを証明する書類です。</p>
+            </div>
+            <div class="document-card bg-slate-50 rounded-3xl border border-slate-200 p-7">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-red-100 text-red-700 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-file-circle-xmark"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-lg">除籍謄本</h3>
+                        <p class="text-xs text-slate-500">除籍全部事項証明書</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-4 mb-5">
+                    <p class="font-black text-slate-900 text-sm mb-2">こんなとき</p>
+                    <p class="text-sm text-slate-600">過去の戸籍を確認したいとき、その戸籍が除籍になっている場合。</p>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed">転籍や死亡などによって、その戸籍に誰も残っていない場合などに除籍として保存されています。</p>
+            </div>
+            <div class="document-card bg-slate-50 rounded-3xl border border-slate-200 p-7">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-violet-100 text-violet-700 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-lg">改製原戸籍</h3>
+                        <p class="text-xs text-slate-500">かいせいげんこせき</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-4 mb-5">
+                    <p class="font-black text-slate-900 text-sm mb-2">こんなとき</p>
+                    <p class="text-sm text-slate-600">戸籍の様式が変更される前の、古い戸籍を確認したいとき。</p>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed">現在の戸籍だけでは確認できない過去の婚姻・出生・養子などを確認するために必要になることがあります。</p>
+            </div>
+            <div class="document-card bg-slate-50 rounded-3xl border border-slate-200 p-7">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-lg">戸籍の附票</h3>
+                        <p class="text-xs text-slate-500">住所の履歴を確認</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-4 mb-5">
+                    <p class="font-black text-slate-900 text-sm mb-2">こんなとき</p>
+                    <p class="text-sm text-slate-600">本籍地の戸籍に記録された住所の履歴を確認したいとき。</p>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed">不動産登記などで、昔の住所と現在の住所のつながりを確認するときの手がかりになります。市区町村の「戸籍」の窓口で取得する書類で、次の「住民票の除票」（住民登録の窓口で取得）とは管轄も記録の仕組みも別物です。</p>
+            </div>
+            <div class="document-card bg-slate-50 rounded-3xl border border-slate-200 p-7">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-700 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-lg">住民票の除票</h3>
+                        <p class="text-xs text-slate-500">住民票の写し（除票）</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-4 mb-5">
+                    <p class="font-black text-slate-900 text-sm mb-2">こんなとき</p>
+                    <p class="text-sm text-slate-600">亡くなった方の最後の住所（死亡時の住民票上の住所）を確認したいとき。</p>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed">相続登記などで「登記簿上の住所」と「死亡時の住所」のつながりを証明する際によく使われます。戸籍の附票で追えない場合の代わりや、附票と合わせて提出を求められることもあります。</p>
+            </div>
+            <div class="document-card bg-brand-50 rounded-3xl border-2 border-brand-200 p-7">
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-12 h-12 bg-brand-500 text-slate-900 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-lg">迷ったら</h3>
+                        <p class="text-xs text-brand-800">無理に決めなくてOK</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-4 mb-5">
+                    <p class="font-black text-slate-900 text-sm mb-2">相続調査の場合</p>
+                    <p class="text-sm text-slate-600">「現在の戸籍だけ」ではなく、必要に応じて過去の戸籍を順番にたどります。</p>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed">市区町村の窓口などで「相続人調査のため、出生から死亡までの戸籍を確認したい」と相談すると、必要な戸籍について案内してもらえる場合があります。</p>
+            </div>
+        </div>
+        <!-- 注意 -->
+        <div class="max-w-4xl mx-auto mt-12">
+            <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                <div class="flex gap-4 items-start">
+                    <i class="fa-solid fa-circle-info text-amber-600 mt-1"></i>
+                    <div>
+                        <h3 class="font-black text-amber-900 mb-2">大切なポイント</h3>
+                        <p class="text-sm text-amber-900/80 leading-relaxed">
+                            「相続なら必ずこの1種類」というわけではありません。
+                            相続人を確定するためには、亡くなった方の出生から死亡までの戸籍を順番に確認するなど、状況に応じて複数の戸籍を取得することがあります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==========================================================
+     次のページへ
+========================================================== -->
+<section class="py-16 px-6 bg-white border-t border-slate-200">
+    <div class="max-w-3xl mx-auto text-center">
+        <p class="text-slate-600 mb-6">
+            実際の戸籍の記載を、タブを切り替えながら読んでみましょう。
+        </p>
+        <a href="simulator.html"
+           class="inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-600 text-slate-900 font-black px-8 py-4 rounded-2xl shadow-xl transition-all">
+            解読シミュレーターを試す
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+<footer class="bg-navy-900 text-slate-600 py-12 px-6 text-center border-t border-slate-800">
+    <p class="font-black text-white text-lg mb-2 tracking-tight">戸籍・附票解読マスター</p>
+    <p class="text-xs max-w-md mx-auto leading-relaxed">複雑な公的書類を、初心者にもわかりやすく読み解くためのものです。</p>
+    <nav class="flex flex-wrap justify-center gap-4 mt-6 text-xs">
+        <a href="index.html" class="hover:text-brand-400">トップ</a>
+        <a href="terms.html" class="hover:text-brand-400">用語</a>
+        <a href="documents.html" class="hover:text-brand-400">書類の選び方</a>
+        <a href="simulator.html" class="hover:text-brand-400">解読シミュレーター</a>
+    </nav>
+    <p class="text-[9px] font-mono tracking-widest pt-6 uppercase">© 2026 戸籍解読マスター</p>
+</footer>
+</body>
+</html>
